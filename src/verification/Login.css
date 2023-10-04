@@ -27,6 +27,12 @@
   padding: 5px 10px;
 }
 
+@media (hover: hover) {
+  .form-box-input-lg {
+    width: calc(390px * 0.8 - 20px);
+  }
+}
+
 .input-field-lg {
   width: 100%;
   padding: 0;
@@ -45,6 +51,12 @@
   height: 45px;
   padding: 0;
   margin-top: 30px;
+}
+
+@media (hover: hover) {
+  .login-btn {
+    width: calc(390px * 0.8);
+  }
 }
 
 .apple-login {
