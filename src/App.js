@@ -14,6 +14,7 @@ import ReviewMain from "./review/ReviewMain";
 
 import Tournament from "./tournament/Tournament";
 import TournamentVote from "./tournament/TournamentVote";
+import TournamentVoteWin from "./tournament/TournamentVoteWin";
 
 import MenuMain from "./menu/MenuMain";
 import Cart from "./menu/Cart";
@@ -35,7 +36,8 @@ function App() {
           <Route path="/reservation" element={<Reservation />} /> {/* 자리 예약 */}
           <Route path="/cart" element={<Cart />} />
           <Route path="/tournament" element={<Tournament />} />
-          <Route path="/votes" element={<TournamentVote />} />
+          <Route path="/tournament/votes" element={<TournamentVote />} />
+          <Route path="/tournament/votes/win" element={<TournamentVoteWin />} />
           <Route path="/bookmark" element={<CartBookmark />} />
         </Routes>
       </div>

@@ -27,7 +27,7 @@ function Tournament() {
             <div className="tour-box-medal-first">
               <p>마성라면</p>
               <div className="tour-box-first">
-                <img src={first} alt="link" />
+                <img src={first} alt="first" />
               </div>
             </div>
 
@@ -101,7 +101,7 @@ function Tournament() {
 
           {/* 투표하기 버튼 */}
           <div className="vote-button">
-            <Link to="/votes">
+            <Link to="/tournament/votes">
               <button>투표하기</button>
             </Link>
           </div>
