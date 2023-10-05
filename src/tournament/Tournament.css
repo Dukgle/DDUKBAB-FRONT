@@ -1,0 +1,44 @@
+.tour-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 50px;
+
+  background-color: #fccb6f;
+  border: solid 1.5px #fccb6f;
+  border-radius: 10px;
+
+  padding: 0;
+  margin-top: 5px;
+}
+
+.tour-box-name {
+  display: flex;
+  margin-left: 25px;
+
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tour-box-rest {
+  margin-right: 25px;
+
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.vote-button button {
+  font-size: 18px;
+  font-family: "Pretendard-Regular";
+  background-color: #fccb6f;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  height: 45px;
+  padding: 0;
+  margin-top: 15px;
+}
