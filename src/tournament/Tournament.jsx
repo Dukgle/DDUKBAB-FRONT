@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 
 import "./Tournament.css";
 
+import first from "../icon/Best-Menu-first.png";
+
 function Tournament() {
   const logoText = "BEST 메뉴";
 
@@ -14,6 +16,29 @@ function Tournament() {
 
         <div className="my-things">
           {/* 순위 별 박스 */}
+          <div className="tour-box-medal-list">
+            <div className="tour-box-medal">
+              <p>마성라면</p>
+              <div className="tour-box-2">
+                <p>2</p>
+              </div>
+            </div>
+
+            <div className="tour-box-medal-first">
+              <p>마성라면</p>
+              <div className="tour-box-first">
+                <img src={first} alt="link" />
+              </div>
+            </div>
+
+            <div className="tour-box-medal">
+              <p>마성라면</p>
+              <div className="tour-box-3">
+                <p>3</p>
+              </div>
+            </div>
+          </div>
+
           <div className="tour-box">
             <div className="tour-box-name">
               <p style={{ color: "#43000A" }}>4위</p>
