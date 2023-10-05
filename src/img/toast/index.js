@@ -1,6 +1,6 @@
 import 햄치즈토스트 from "./햄치즈토스트.jpg";
 import 프렌치토스트 from "./프렌치토스트.jpg";
-import 프랜치토스트_음료수 from "./프렌치토스트_음료수.jpg";
+import 프렌치토스트_음료수 from "./프렌치토스트_음료수.jpg";
 import 마카다미아쿠키 from "./마카다미아쿠키.jpg";
 import 스콘 from "./스콘.jpg";
 import 비스킷슈 from "./비스킷슈.jpg";
@@ -16,7 +16,7 @@ import 티라미수스틱케익 from "./티라미수스틱케익.jpg";
 const images = {
     햄치즈토스트,
     프렌치토스트,
-    프랜치토스트_음료수,
+    프렌치토스트_음료수,
     마카다미아쿠키,
     스콘,
     비스킷슈,

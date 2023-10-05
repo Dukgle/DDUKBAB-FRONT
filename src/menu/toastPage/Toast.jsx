@@ -1,9 +1,9 @@
-import './MenuList.css';
+import '../MenuList.css';
 import React from 'react';
-import Header_menu from '../header/Header_menu';
+import Header_menu from '../../header/Header_menu';
 import { Link } from 'react-router-dom';
-import images from '../img/toast/index.js';
-import star from '../icon/star1.png';
+import images from '../../img/toast/index.js';
+import BookmarkButton from '../bookmark/Bookmark';
 
 function Toast() {
     const logoText = "토스트";
@@ -11,7 +11,7 @@ function Toast() {
     const menus = [
         { name: "햄치즈토스트", price: "3,500"},
         { name: "프렌치토스트", price: "2,500"},
-        { name: "프랜치토스트_음료수", price: "4,000"},
+        { name: "프렌치토스트_음료수", price: "4,000"},
         { name: "마카다미아쿠키", price: "1,400"},
         { name: "스콘", price: "1,900"},
         { name: "비스킷슈", price: "2,300"},
@@ -32,17 +32,14 @@ function Toast() {
             <div id='menu-list'>
                 {menus.map((m,i) => (
                         <div className='menu-container'>
+                            <div className='bookmarkIcon'>
+                                <BookmarkButton />
+                            </div>
                             <React.Fragment key={m.name}>
                                 <Link to={`/menu/${m.name}`}>
                                     <div className='menu-wrap' id={m.name}>
                                         <div className='img'>
                                             <img src={images[m.name]} alt='사진' width='90' height='70' />
-                                        </div>
-                                        <div className='bookmarkIcon'>
-                                            <button className='bookmark-button'>
-                                                <img src={star} alt="Star" />
-                                            </button>
-                                            {/*<starButton bookmark={bookmark} onClick={toggleBookmark}/>*/}
                                         </div>
                                         <div className='name'>{m.name}</div>
                                     </div>

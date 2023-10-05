@@ -1,29 +1,13 @@
-import './MenuList.css';
+import '../MenuList.css';
 import React, { useState, useEffect } from 'react';
-import Header_menu from '../header/Header_menu';
+import Header_menu from '../../header/Header_menu';
 import { Link } from 'react-router-dom';
-import images from '../img/pasta/index.js';
-import star from '../icon/star1.png';
-
-import styled from "styled-components";
-import emptyStar from "../icon/star1.png";
-import fullStar from "../icon/star2.png";
+import images from '../../img/pasta/index.js';
+import BookmarkButton from '../bookmark/Bookmark';
 
 function Pasta() {
     const logoText = "파스타";
-/*
-    const Star = styled.img`
-        width = 20px;
-        height = 20px;
-        }
-    `;
 
-    const starButton = ({ bookmark, onClick }) => {
-        return (
-            <Star src={bookmark?fullStar:emptyStar} onClick={onClick} />
-        );
-    };
-*/
     const menus = [
         { name: "고기리들기름파스타", price: "6,000"},
         { name: "우삼겹알리올리오", price: "6,500"},
@@ -44,17 +28,14 @@ function Pasta() {
             <div id='menu-list'>
                 {menus.map((m,i) => (
                         <div className='menu-container'>
+                            <div className='bookmarkIcon'>
+                                <BookmarkButton />
+                            </div>
                             <React.Fragment key={m.name}>
                                 <Link to={`/menu/${m.name}`}>
                                     <div className='menu-wrap' id={m.name}>
                                         <div className='img'>
                                             <img src={images[m.name]} alt='사진' width='90' height='70' />
-                                        </div>
-                                        <div className='bookmarkIcon'>
-                                            <button className='bookmark-button'>
-                                                <img src={star} alt="Star" />
-                                            </button>
-                                            {/*<starButton bookmark={bookmark} onClick={toggleBookmark}/>*/}
                                         </div>
                                         <div className='name'>{m.name}</div>
                                     </div>
