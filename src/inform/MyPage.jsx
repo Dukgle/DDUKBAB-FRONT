@@ -75,10 +75,10 @@ function MyPage() {
         </div>
 
         <div className="my-food">
-          <div className="name-title">나의 식단</div>
+          <div className="name-title">내 주문내역</div>
           <Link to="/#">
             <button className="name-box-2">
-              <p>식단 관리하러 가기</p>
+              <p>주문내역 확인하러 가기</p>
               <img src={linkImg} alt="link" />
             </button>
           </Link>
