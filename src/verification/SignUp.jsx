@@ -147,7 +147,7 @@ function SignUp() {
                 <p>동일한 비밀번호를 입력하세요.</p>
               </div>
 
-              <Link to="/">
+              <Link to="/" style={{ marginTop: "30px" }}>
                 <input
                   id="signup"
                   type="submit"
