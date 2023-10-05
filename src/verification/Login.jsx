@@ -32,7 +32,7 @@ function Login() {
           <div className="form-box-input-lg">
             <input type="password" name="" id="password" className="input-field-lg" placeholder="비밀번호" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
-          <Link to="/menu">
+          <Link to="/menu" style={{ marginTop: "30px" }}>
             <input
               id="signup"
               type="submit"
