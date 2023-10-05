@@ -1,9 +1,9 @@
-import './MenuList.css';
+import '../MenuList.css';
 import React, { useState, useEffect } from 'react';
-import Header_menu from '../header/Header_menu';
+import Header_menu from '../../header/Header_menu';
 import { Link } from 'react-router-dom';
-import images from '../img/katsu/index.js';
-import star from '../icon/star1.png';
+import images from '../../img/katsu/index.js';
+import BookmarkButton from '../bookmark/Bookmark';
 
 function Katsu() {
     const logoText = "군산카츠";
@@ -24,17 +24,14 @@ function Katsu() {
             <div id='menu-list'>
                 {menus.map((m,i) => (
                         <div className='menu-container'>
+                            <div className='bookmarkIcon'>
+                                <BookmarkButton />
+                            </div>
                             <React.Fragment key={m.name}>
                                 <Link to={`/menu/${m.name}`}>
                                     <div className='menu-wrap' id={m.name}>
                                         <div className='img'>
                                             <img src={images[m.name]} alt='사진' width='90' height='70' />
-                                        </div>
-                                        <div className='bookmarkIcon'>
-                                            <button className='bookmark-button'>
-                                                <img src={star} alt="Star" />
-                                            </button>
-                                            {/*<starButton bookmark={bookmark} onClick={toggleBookmark}/>*/}
                                         </div>
                                         <div className='name'>{m.name}</div>
                                     </div>

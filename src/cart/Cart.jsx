@@ -13,6 +13,10 @@ function Cart() {
     const emptyStyle = {
     }
 
+    const cart_menus = [
+
+    ]
+
     return (
         <div className="cart-page">
             <Header logoText={logoText} />
