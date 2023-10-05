@@ -7,6 +7,7 @@ import Login from "./verification/Login";
 import SignUp from "./verification/SignUp";
 
 import MyPage from "./inform/MyPage";
+import MyPageSale from "./inform/MyPageSale";
 import Information from "./inform/Information";
 import Reservation from "./reservation/Reservation";
 import ReviewMain from "./review/ReviewMain";
@@ -26,7 +27,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/review" element={<ReviewMain />} /> {/* 후기게시판 메인 페이지 */}
           <Route path="/signup" element={<SignUp />} /> {/* 회원가입 */}
-          <Route path="/mypage" element={<MyPage />} />
+          <Route path="/mypage" element={<MyPage />} /> {/* 마이페이지 - 학생/교직원 */}
+          <Route path="/mypagesale" element={<MyPageSale />} /> {/* 마이페이지 - 판매자 */}
           <Route path="/information" element={<Information />} /> {/* 내 정보 */}
           <Route path="/menu" element={<MenuMain />} /> {/* 메뉴 메인 페이지 */}
           <Route path="/reservation" element={<Reservation />} /> {/* 자리 예약 */}
