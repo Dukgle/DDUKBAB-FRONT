@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../header/Header";
+import Header_mypage from "../header/Header_mypage";
 import { Link } from "react-router-dom";
 
 import "./Information.css";
@@ -9,7 +9,7 @@ function Information() {
 
   return (
     <div className="inform-page">
-      <Header logoText={logoText} />
+      <Header_mypage logoText={logoText} />
 
       <div className="my-things">
         <div className="my-name">

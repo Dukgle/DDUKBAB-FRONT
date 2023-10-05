@@ -9,7 +9,7 @@ import Cart from "../cart/Cart";
 import Qr from "./Qr";
 import Dropdown from "./Dropdown";
 
-function Header_menu({ logoText }) {
+function Header_mypage({ logoText }) {
   const [isDropdownView, setDropdownView] = useState(false); // 드롭다운을 위한 함수 정의
 
   const handleClickContainer = () => {
@@ -25,9 +25,11 @@ function Header_menu({ logoText }) {
   return (
     <header>
       <div className="header-menu">
-        <div className="back" style={{ marginTop: "3px" }}>
-          <Link to="/menu">
-            <button className="back-button">MENU&gt;</button>
+        <div className="back" style={{ marginTop: "2px" }}>
+          <Link to="/MyPage">
+            <button className="back-button" style={{ fontSize: "18px" }}>
+              마이페이지 &gt;
+            </button>
           </Link>
         </div>
         <div className="nickname" id="menu_nickname">
@@ -67,4 +69,4 @@ function Header_menu({ logoText }) {
   );
 }
 
-export default Header_menu;
+export default Header_mypage;
