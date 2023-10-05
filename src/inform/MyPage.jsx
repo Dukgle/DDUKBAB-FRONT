@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../header/Header";
 import { Link } from "react-router-dom";
+import Modal from "react-modal";
 
 import "./MyPage.css";
 
 import linkImg from "../icon/linkImg.svg";
+import QrImg from "../img/QR_example.png";
 
 function MyPage() {
   const logoText = "마이페이지";
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true); // 모달창이 열릴 수 있는 상태
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false); // 모달창을 닫을 수 있는 상태
+  };
 
   return (
     <div className="my-page">
@@ -43,7 +55,7 @@ function MyPage() {
             {/* <p>예약된 내역이 없습니다.</p> */}
 
             {/* 2. 예약 내역이 있는 경우 */}
-            <div className="my-seat">
+            <div className="my-seat" onClick={openModal}>
               <div className="my-seat-text">
                 <p>내 자리</p>
               </div>
@@ -73,6 +85,12 @@ function MyPage() {
             </div>
           </div>
         </div>
+        <Modal isOpen={modalIsOpen} onRequestClose={closeModal} contentLabel="QR Code Modal" className="qr-modal-container">
+          <h4>예약한 좌석</h4>
+          <h1>A-1</h1>
+          <h4>남은 시간</h4>
+          <img src={QrImg} alt="QR 코드 예시입니다." className="qr-img"></img>
+        </Modal>
 
         <div className="my-food">
           <div className="name-title">내 주문내역</div>
