@@ -22,6 +22,20 @@ function MyPageSale() {
               <button className="inform-modi-btn">수정</button>
             </Link>
           </div>
+
+          <div className="sales-line" style={{ marginTop: "25px" }}>
+            <hr />
+          </div>
+          <div className="sales-tag">
+            <p>음식 이름</p>
+            <p>품절 확인</p>
+          </div>
+          <div className="sales-line">
+            <hr />
+          </div>
+
+          {/* 품절 음식 칸 */}
+          {/* 판매량 그래프 */}
         </div>
       </div>
     </div>

@@ -1,0 +1,12 @@
+.sales-tag {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sales-line > hr {
+  border: none;
+  border-bottom: solid 1.5px #43000a;
+}
