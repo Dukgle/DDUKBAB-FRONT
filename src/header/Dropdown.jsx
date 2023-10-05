@@ -25,7 +25,7 @@ function Dropdown() {
           <Link to="/myPage">{MyPage}마이페이지</Link>
         </li>
         <li>
-          <Link to="/tournament">{Tournament}Best 메뉴</Link>
+          <Link to="/tournament">{Tournament}BEST 메뉴</Link>
         </li>
       </ul>
     </>

@@ -3,6 +3,7 @@ import Header from "../header/Header";
 import { Link } from "react-router-dom";
 
 import "./MyPageSale.css";
+import SaleChart from "./SaleChart";
 
 function MyPageSale() {
   const logoText = "마이페이지";
@@ -23,6 +24,14 @@ function MyPageSale() {
             </Link>
           </div>
 
+          {/* 판매량 그래프 */}
+          <div className="stock-chart">
+            <div className="name-title">
+              <p>날짜별 총 판매량</p>
+            </div>
+            <SaleChart />
+          </div>
+
           <div className="sales-line" style={{ marginTop: "25px" }}>
             <hr />
           </div>
@@ -35,7 +44,37 @@ function MyPageSale() {
           </div>
 
           {/* 품절 음식 칸 */}
-          {/* 판매량 그래프 */}
+          <div className="food-box-list">
+            <div className="food-box">
+              <p>마성떡볶이</p>
+              <div className="stock-btn">
+                <label class="switch-button">
+                  <input type="checkbox" />
+                  <span class="onoff-switch"></span>
+                </label>
+              </div>
+            </div>
+
+            <div className="food-box">
+              <p>마성떡볶이</p>
+              <div className="stock-btn">
+                <label class="switch-button">
+                  <input type="checkbox" />
+                  <span class="onoff-switch"></span>
+                </label>
+              </div>
+            </div>
+
+            <div className="food-box">
+              <p>마성떡볶이</p>
+              <div className="stock-btn">
+                <label class="switch-button">
+                  <input type="checkbox" />
+                  <span class="onoff-switch"></span>
+                </label>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
