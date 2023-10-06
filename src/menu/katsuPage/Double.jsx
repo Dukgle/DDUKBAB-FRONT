@@ -17,19 +17,21 @@ function Double() {
             <div className='bookmarkIcon'>
                 <BookmarkButton />
             </div>
-            <div className='menu-inform-wrap'>
-                <div className='menu-img'>
-                    <img src={image} alt='사진' width='130' height='110' />
-                </div>
-                <div className='infrom-text'>
-                    <div className='menu-name'>
-                        더블돈카츠
+            <Link to="/optionKatsu">
+                <div className='menu-inform-wrap'>
+                    <div className='menu-img'>
+                        <img src={image} alt='사진' width='130' height='110' />
                     </div>
-                    <div className='menu-price'>
-                        9,500원
+                    <div className='infrom-text'>
+                        <div className='menu-name'>
+                            더블돈카츠
+                        </div>
+                        <div className='menu-price'>
+                            9,500원
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <div className='nutrient-img'>
                 <img src={image_net} alt='사진' width='340' height='215' />
             </div>

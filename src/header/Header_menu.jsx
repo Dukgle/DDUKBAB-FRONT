@@ -25,7 +25,7 @@ function Header_menu({ logoText }) {
   return (
     <header>
       <div className="header-menu">
-        <div className="back" style={{ marginTop: "4px" }}>
+        <div className="back" style={{ marginTop: "3px" }}>
           <Link to="/menu">
             <button className="back-button">MENU&gt;</button>
           </Link>
@@ -34,7 +34,7 @@ function Header_menu({ logoText }) {
           닉네임
         </div>
         {/* 나중에 연결 */}
-        <div className="logo-page" style={{ marginTop: "-1px" }}>
+        <div className="logo-page" style={{ marginTop: "0" }}>
           <div className="logo">{logoText}</div> {/* 페이지 이름 */}
           <div className="icon-wrap">
             <div className="icon">

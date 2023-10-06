@@ -17,19 +17,21 @@ function Chicken_bokki() {
             <div className='bookmarkIcon'>
                 <BookmarkButton />
             </div>
-            <div className='menu-inform-wrap'>
-                <div className='menu-img'>
-                    <img src={image} alt='사진' width='130' height='110' />
-                </div>
-                <div className='infrom-text'>
-                    <div className='menu-name'>
-                        치킨꼬치떡볶이
+            <Link to="/optionMasung">
+                <div className='menu-inform-wrap'>
+                    <div className='menu-img'>
+                        <img src={image} alt='사진' width='130' height='110' />
                     </div>
-                    <div className='menu-price'>
-                        5,500원
+                    <div className='infrom-text'>
+                        <div className='menu-name'>
+                            치킨꼬치떡볶이
+                        </div>
+                        <div className='menu-price'>
+                            5,500원
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <div className='nutrient-img'>
                 <img src={image_net} alt='사진' width='340' height='215' />
             </div>

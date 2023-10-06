@@ -4,6 +4,7 @@ import Header_menu from "../../header/Header_menu";
 import { Link } from "react-router-dom";
 import images from "../../img/masung/index.js";
 import BookmarkButton from "../bookmark/Bookmark";
+import soldOutImage from "../../img/품절.png";
 
 function Masung() {
   const logoText = "마성떡볶이";
@@ -33,6 +34,13 @@ function Masung() {
     { name: "오징어튀김", price: "3,000" },
   ];
 
+  const menusOut = [
+    { name: "마성떡볶이", price: "3,500" },
+    { name: "치킨꼬치떡볶이", price: "5,500" },
+    { name: "버터장조림덮밥", price: "5,000" },
+    { name: "치킨마요덮밥", price: "5,000" },
+  ];
+
   return (
     <div className="menu-page">
       <Header_menu logoText={logoText} />
@@ -46,9 +54,7 @@ function Masung() {
             <React.Fragment key={m.name}>
               <Link to={`/menu/${m.name}`}>
                 <div className="menu-wrap" id={m.name}>
-                  <div className="img-menus">
-                    <img src={images[m.name]} alt="사진" width="90" height="70" />
-                  </div>
+                  <div className="img-menus">{menusOut.some((menu) => menu.name === m.name) ? <img src={soldOutImage} alt="품절" className="sold-out-image" width="80" height="60" /> : <img src={images[m.name]} alt="사진" width="90" height="70" />}</div>
                   <div className="name">{m.name}</div>
                 </div>
               </Link>

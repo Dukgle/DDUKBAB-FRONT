@@ -17,19 +17,21 @@ function Shrimp() {
             <div className='bookmarkIcon'>
                 <BookmarkButton />
             </div>
-            <div className='menu-inform-wrap'>
-                <div className='menu-img'>
-                    <img src={image} alt='사진' width='130' height='110' />
-                </div>
-                <div className='infrom-text'>
-                    <div className='menu-name'>
-                        새우카레덮밥
+            <Link to="/optionKatsu">
+                <div className='menu-inform-wrap'>
+                    <div className='menu-img'>
+                        <img src={image} alt='사진' width='130' height='110' />
                     </div>
-                    <div className='menu-price'>
-                        7,500원
+                    <div className='infrom-text'>
+                        <div className='menu-name'>
+                            새우카레덮밥
+                        </div>
+                        <div className='menu-price'>
+                            7,500원
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <div className='nutrient-img'>
                 <img src={image_net} alt='사진' width='340' height='215' />
             </div>

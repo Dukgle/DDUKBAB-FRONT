@@ -162,3 +162,10 @@ button {
   box-sizing: border-box; /* 패딩을 포함한 전체 크기로 설정 */
   text-align: center;
 }
+
+@media (hover: hover) {
+  .qr-modal-container {
+    width: calc(390px * 0.6);
+    max-width: calc(390px * 0.6);
+  }
+}
