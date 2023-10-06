@@ -7,7 +7,7 @@ import BookmarkButton from '../bookmark/Bookmark';
 import soldOutImage from '../../img/품절.png'
 
 function Cafe() {
-    const logoText = "샌드위치 카페";
+  const logoText = "샌드위치 카페";
 
     const menus = [
         { name: "아메리카노", price: "2,000"},
@@ -74,7 +74,7 @@ function Cafe() {
                             <React.Fragment key={m.name}>
                                 <Link to={`/menu/${m.name}`}>
                                     <div className='menu-wrap' id={m.name}>
-                                        <div className='img'>
+                                        <div className='img-menus'>
                                             {menusOut.some(menu => menu.name === m.name) ? (
                                                 <img src={soldOutImage} alt='품절' className='sold-out-image' width='80' height='60' />
                                             ) : (<img src={images[m.name]} alt='사진' width='90' height='70' />)}
@@ -86,8 +86,21 @@ function Cafe() {
                         </div>
                     ))}
             </div>
-        </div>
-    );
+            <React.Fragment key={m.name}>
+              <Link to={`/menu/${m.name}`}>
+                <div className="menu-wrap" id={m.name}>
+                  <div className="img-menus">
+                    <img src={images[m.name]} alt="사진" width="90" height="70" />
+                  </div>
+                  <div className="name">{m.name}</div>
+                </div>
+              </Link>
+            </React.Fragment>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Cafe;

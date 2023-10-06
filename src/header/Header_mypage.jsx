@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./Header_menu.css";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ import Cart from "../cart/Cart";
 import Qr from "./Qr";
 import Dropdown from "./Dropdown";
 
-function Header({ logoText }) {
+function Header_mypage({ logoText }) {
   const [isDropdownView, setDropdownView] = useState(false); // 드롭다운을 위한 함수 정의
 
   const handleClickContainer = () => {
@@ -25,16 +25,18 @@ function Header({ logoText }) {
   return (
     <header>
       <div className="header-menu">
-        <div className="back">
-          <button className="back-button" style={{ color: "rgba(0,0,0,0)" }}>
-            　&gt;
-          </button>
+        <div className="back" style={{ marginTop: "2px" }}>
+          <Link to="/MyPage">
+            <button className="back-button" style={{ fontSize: "18px" }}>
+              마이페이지 &gt;
+            </button>
+          </Link>
         </div>
         <div className="nickname" id="menu_nickname">
           닉네임
         </div>
         {/* 나중에 연결 */}
-        <div className="logo-page">
+        <div className="logo-page" style={{ marginTop: "0" }}>
           <div className="logo">{logoText}</div> {/* 페이지 이름 */}
           <div className="icon-wrap">
             <div className="icon">
@@ -67,4 +69,4 @@ function Header({ logoText }) {
   );
 }
 
-export default Header;
+export default Header_mypage;

@@ -1,10 +1,10 @@
-import "./Reservation.css";
+import "./TwoFourPage.css";
 import Header from "../header/Header";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ResModal from "./ResModal";
 
-function Reservation() {
+function TwoFourPage() {
   const logoText = "좌석 예약";
   const [selectedOption, setSelectedOption] = useState("");
   const dropdownOptions = ["1인석", "2인석, 4인석"];
@@ -36,36 +36,63 @@ function Reservation() {
     }
   }, [selectedOption, navigate]);
 
-  // 테이블에 할당할 텍스트 배열
-  const tableLabels = ["A", "B", "C", "D", "E", "F"];
+  // 테이블, 의자에 할당할 텍스트 배열
+  const ftableLabels = ["A", "B", "C", "D"];
+  const fchairLabels = ["a", "b", "c", "d"];
 
-  // 테이블, 의자 배치
-  const tables = [];
-  for (let i = 0; i < 6; i++) {
-    tables.push(
-      <div key={i} className="table">
-        <div className="table-text">{tableLabels[i]}</div>
-        <div className="table-top-chairs">
-          <div className="chair" onClick={openModal}>
+  // 4인 테이블, 의자 배치
+  const ftables = [];
+  for (let i = 0; i < ftableLabels.length; i++) {
+    const ftableLabel = ftableLabels[i];
+    const ftopChairLabel = fchairLabels[i];
+    const fbottomChairLabel = fchairLabels[i];
+
+    ftables.push(
+      <div key={i} className="ftable">
+        <div className="f-table-text">{ftableLabel}</div>
+        <div className="f-table-top-chairs">
+          <div className="fchair" onClick={openModal}>
             <div className="chair-seat">
-              <span>1</span>
-            </div>
-          </div>
-          <div className="chair" onClick={openModal}>
-            <div className="chair-seat">
-              <span>2</span>
+              <span>{ftopChairLabel}</span>
             </div>
           </div>
         </div>
-        <div className="table-bottom-chairs">
-          <div className="chair" onClick={openModal}>
+        <div className="f-table-bottom-chairs">
+          <div className="fchair" onClick={openModal}>
             <div className="chair-seat">
-              <span>3</span>
+              <span>{fbottomChairLabel}</span>
             </div>
           </div>
-          <div className="chair" onClick={openModal}>
+        </div>
+      </div>
+    );
+  }
+
+  // 테이블, 의자에 할당할 텍스트 배열
+  const ttableLabels = ["E", "F", "G", "O"];
+  const tchairLabels = ["e", "f", "g", "o"];
+
+  // 2인 테이블, 의자 배치
+  const ttables = [];
+  for (let i = 0; i < ttableLabels.length; i++) {
+    const ttableLabel = ttableLabels[i];
+    const ttopChairLabel = tchairLabels[i];
+    const tbottomChairLabel = tchairLabels[i];
+
+    ttables.push(
+      <div key={i} className="ttable">
+        <div className="t-table-text">{ttableLabel}</div>
+        <div className="t-table-top-chairs">
+          <div className="tchair" onClick={openModal}>
             <div className="chair-seat">
-              <span>4</span>
+              <span>{ttopChairLabel}</span>
+            </div>
+          </div>
+        </div>
+        <div className="t-table-bottom-chairs">
+          <div className="tchair" onClick={openModal}>
+            <div className="chair-seat">
+              <span>{tbottomChairLabel}</span>
             </div>
           </div>
         </div>
@@ -104,10 +131,11 @@ function Reservation() {
 
       {/* 테이블 렌더링 */}
       <div className="tables-container-box">
-        <div className="tables-container">{tables}</div>
+        <div className="f-tables-container">{ftables}</div>
+        <div className="t-tables-container">{ttables}</div>
       </div>
     </div>
   );
 }
 
-export default Reservation;
+export default TwoFourPage;
