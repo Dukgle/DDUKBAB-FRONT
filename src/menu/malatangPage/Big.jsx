@@ -17,19 +17,21 @@ function Big() {
             <div className='bookmarkIcon'>
                 <BookmarkButton />
             </div>
-            <div className='menu-inform-wrap'>
-                <div className='menu-img'>
-                    <img src={image} alt='사진' width='130' height='110' />
-                </div>
-                <div className='infrom-text'>
-                    <div className='menu-name'>
-                        꿔바로우_대
+            <Link to="/optionMalatang">
+                <div className='menu-inform-wrap'>
+                    <div className='menu-img'>
+                        <img src={image} alt='사진' width='130' height='110' />
                     </div>
-                    <div className='menu-price'>
-                        10,000원
+                    <div className='infrom-text'>
+                        <div className='menu-name'>
+                            꿔바로우_대
+                        </div>
+                        <div className='menu-price'>
+                            10,000원
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <div className='nutrient-img'>
                 <img src={image_net} alt='사진' width='340' height='215' />
             </div>
