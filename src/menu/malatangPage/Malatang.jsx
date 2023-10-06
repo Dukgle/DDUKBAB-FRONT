@@ -4,6 +4,7 @@ import Header_menu from '../../header/Header_menu';
 import { Link } from 'react-router-dom';
 import images from '../../img/malatang/index.js';
 import BookmarkButton from '../bookmark/Bookmark';
+import soldOutImage from '../../img/품절.png'
 
 function Malatang() {
     const logoText = "마라탕";
@@ -14,6 +15,10 @@ function Malatang() {
         { name: "꿔바로우_소", price: "5,000"},
         { name: "꿔바로우_대", price: "10,000"},
         { name: "빙홍차", price: "2,500"}
+    ];
+
+    const menusOut = [
+        { name: "꿔바로우_대", price: "10,000"}
     ];
 
     return (
@@ -30,7 +35,9 @@ function Malatang() {
                                 <Link to={`/menu/${m.name}`}>
                                     <div className='menu-wrap' id={m.name}>
                                         <div className='img'>
-                                            <img src={images[m.name]} alt='사진' width='90' height='70' />
+                                            {menusOut.some(menu => menu.name === m.name) ? (
+                                                <img src={soldOutImage} alt='품절' className='sold-out-image' width='80' height='60' />
+                                            ) : (<img src={images[m.name]} alt='사진' width='90' height='70' />)}
                                         </div>
                                         <div className='name'>{m.name}</div>
                                     </div>

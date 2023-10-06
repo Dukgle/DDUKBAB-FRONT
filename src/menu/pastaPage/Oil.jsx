@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom';
 import image from '../../img/pasta/고기리들기름파스타.jpg';
 import image_net from '../../img/nutrient/pasta.png';
 import BookmarkButton from '../bookmark/Bookmark';
-// import Chart from '../Chart';
 
 function Oil() {
     const logoText = "파스타";
+    const menuName = {
+        menuText: "고기리들기름파스타"
+    };
 
     return (
         <div className="menu-imform">
@@ -17,19 +19,21 @@ function Oil() {
             <div className='bookmarkIcon'>
                 <BookmarkButton />
             </div>
-            <div className='menu-inform-wrap'>
-                <div className='menu-img'>
-                    <img src={image} alt='사진' width='130' height='110' />
-                </div>
-                <div className='infrom-text'>
-                    <div className='menu-name'>
-                        고기리들기름파스타
+            <Link to="/optionPasta">
+                <div className='menu-inform-wrap'>
+                    <div className='menu-img'>
+                        <img src={image} alt='사진' width='130' height='110' />
                     </div>
-                    <div className='menu-price'>
-                        6,000원
+                    <div className='infrom-text'>
+                        <div className='menu-name'>
+                            고기리들기름파스타
+                        </div>
+                        <div className='menu-price'>
+                            6,000원
+                        </div>
                     </div>
                 </div>
-            </div>
+            </Link>
             <div className='nutrient-img'>
                 <img src={image_net} alt='사진' width='340' height='215' />
             </div>

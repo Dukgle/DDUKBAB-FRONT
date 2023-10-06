@@ -10,28 +10,28 @@ function MenuMain() {
         <div className="menu-page">
             <Header logoText={logoText} />
             <div id='gap'></div>
-            <Link to='/todayA'>
+            <Link to='/오늘의 메뉴 A'>
                 <button className='a-menu-button'>오늘의 메뉴 A</button>
             </Link>
-            <Link to='/todayB'>
+            <Link to='/오늘의 메뉴 B'>
                 <button className='b-menu-button'>오늘의 메뉴 B</button>
             </Link>
-            <Link to='/pasta'>
+            <Link to='/파스타'>
                 <button className='pasta-menu-button'>파스타</button>
             </Link>
-            <Link to='/katsu'>
+            <Link to='/군산카츠'>
                 <button className='katsu-menu-button'>군산카츠</button>
             </Link>
-            <Link to='/masung'>
+            <Link to='/마성떡볶이'>
                 <button className='masung-menu-button'>마성떡볶이</button>
             </Link>
-            <Link to='/malatang'>
+            <Link to='/한우사골 마라탕'>
                 <button className='malatang-menu-button'>한우사골 마라탕</button>
             </Link>
-            <Link to='/toast'>
+            <Link to='/토스트'>
                 <button className='toast-menu-button'>토스트</button>
             </Link>
-            <Link to='/cafe'>
+            <Link to='/샌드위치 카페'>
                 <button className='cafe-menu-button'>샌드위치 카페</button>
             </Link>
         </div>
