@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header_mypage from "../header/Header_mypage";
 import { Link } from "react-router-dom";
 
@@ -6,6 +6,7 @@ import "./Information.css";
 
 function Information() {
   const logoText = "내 정보";
+  const [username, setUsername] = useState("");
 
   return (
     <div className="inform-page">
@@ -18,10 +19,12 @@ function Information() {
           </div>
           <form action="" className="inform-change-form" method="post">
             <div className="name-box">
-              <input type="text" name="" id="username" className="input-field" placeholder="닉네임" required />
+              <input type="text" name="" id="username" className="input-field" placeholder="닉네임" value={username} onChange={(e) => setUsername(e.target.value)} required />
             </div>
             <div className="inform-change-btns">
-              <button className="change-none-btn">취소</button>
+              <Link to="/MyPage">
+                <button className="change-none-btn">취소</button>
+              </Link>
               <input id="" type="submit" className="change-save-btn" value="저장" />
             </div>
           </form>
